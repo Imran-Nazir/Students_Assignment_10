@@ -13,9 +13,9 @@ router.get('/RecoverVerifyOTP/:email/:otp',AuthVerify, StudentsProfileController
 router.post('/RecoverResetPass',AuthVerify, StudentsProfileController.RecoverResetPass);
 
 router.post('/createWork', AuthVerify, createWork);
-router.post('/deleteWork', AuthVerify, deleteWork);
-router.post('/UpdateWorkByStatus', AuthVerify, updateWorkByStatus);
-router.get('/findWorkByStatus', AuthVerify, findWorkByStatus);
+router.post('/deleteWork/:id', AuthVerify, deleteWork);
+router.post('/UpdateWorkByStatus/:id/:status', AuthVerify, updateWorkByStatus);
+router.get('/findWorkByStatus/:status', AuthVerify, findWorkByStatus);
 
 module.exports = router;
 
